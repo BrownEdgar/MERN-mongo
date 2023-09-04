@@ -6,6 +6,7 @@ import './App.css'
 import Layouts from './components/Layouts/Layouts';
 import Home from './pages/Home/Home';
 import Cars from './pages/Cars/Cars';
+import Login from './pages/Login/Login';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
 			<Route path="/" element={<Layouts />}>
 				<Route index element={<Home />} />
 				<Route path='cars' element={<Cars />} />
+				<Route path='login' element={<Login />} />
 				<Route path="*" element={<Navigate to='/' replace />} />
 
 			</Route>
