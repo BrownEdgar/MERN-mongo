@@ -8,4 +8,11 @@ const PASPORT_OPTIONS = {
 /* GET home page. */
 router.get('/google', passport.authenticate('google', { scope: ['profile'] }));
 router.get('/google/callback', passport.authenticate("google", PASPORT_OPTIONS))
+
+router.get("/login/fail", (req, res) => {
+	res.status(401).json({
+		success: false,
+		message: "failure",
+	});
+})
 module.exports = router;
