@@ -19,6 +19,9 @@ export default function Navbar() {
 					<li>
 						<Link to='/cars'>Cars</Link>
 					</li>
+					<li>
+						<Link to='/addCars'>Add Cars</Link>
+					</li>
 				</ul>
 			</nav>
 		</header>

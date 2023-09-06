@@ -6,15 +6,15 @@ import './Login.scss'
 
 const Login = () => {
 	const google = () => {
-		window.open("http://localhost:3001/auth/google", "_self");
+		window.open("http://localhost:3000/auth/google", "_self");
 	};
 
 	const github = () => {
-		window.open("http://localhost:3001/auth/github", "_self");
+		window.open("http://localhost:3000/auth/github", "_self");
 	};
 
 	const facebook = () => {
-		window.open("http://localhost:3001/auth/facebook", "_self");
+		window.open("http://localhost:3000/auth/facebook", "_self");
 	};
 
 	return (
