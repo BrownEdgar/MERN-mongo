@@ -11,6 +11,8 @@ const passportConfig = require('./passport');
 
 const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
+const carsRouter = require('./routes/cars');
+const { default: mongoose } = require('mongoose');
 
 const app = express();
 
@@ -33,9 +35,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'uploads')));
 
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
+app.use('/cars', carsRouter);
+
+mongoose.connect(process.env.MONGO_DB_URL)
+.then(() => console.log("welcome to Mongo DB"))
+.catch(err =>  console.log(err))
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
