@@ -24,8 +24,10 @@ app.use(
   cookieSession({ name: "session", keys: ["zidan"], maxAge: 24 * 60 * 60 * 1000 })
 );
 app.use(cors({
-  origin: '*',
-  credentials: true
+  origin: 'http://localhost:5173',
+  credentials: true,
+  withCredentials: true,
+  "Access-Control-Allow-Credentials": true,
 }))
 app.use(passport.initialize());
 app.use(passport.session());

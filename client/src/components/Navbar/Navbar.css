@@ -1,26 +1,38 @@
 header {
-	height: 80px;
-	background-color: #2d2d2d;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px;
-	color:beige;
+  height: 80px;
+  background-color: #2d2d2d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: beige;
 }
 
 nav {
-	width: 40%;
-	height: 100%;
+  width: 60%;
+  height: 100%;
 }
+
 ul {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	color: inherit
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: inherit
 }
+
 ul li {
-	font-variant: small-caps;
-	font-size: 18px;
+  font-variant: small-caps;
+  font-size: 18px;
+  text-transform: lowercase;
+}
+
+.link {
+  background-color: royalblue;
+  text-transform: lowercase;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  margin-right: 20px;
 }
