@@ -12,7 +12,12 @@ const passportConfig = require('./passport');
 const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');
 const carsRouter = require('./routes/cars');
-const { default: mongoose } = require('mongoose');
+const mongoose = require('mongoose');
+
+const models = require('./models')
+const services = require('./services')
+
+
 
 const app = express();
 
@@ -42,9 +47,19 @@ app.use('/', indexRouter);
 app.use('/auth', authRouter);
 app.use('/cars', carsRouter);
 
+app.models = {
+  cars: models.cars
+}
+
+app.services = {
+  cars: new (services.cars)(app.models)
+}
+
 mongoose.connect(process.env.MONGO_DB_URL)
   .then(() => console.log("welcome to Mongo DB"))
   .catch(err => console.log(err))
+
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

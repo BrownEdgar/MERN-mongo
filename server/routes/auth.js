@@ -29,7 +29,6 @@ router.get("/login/success", (req, res) => {
 });
 
 router.get("/logout", (req, res) => {
-  console.log(11111111111);
   req.logout();
   res.redirect(CLIENT_URL);
 });

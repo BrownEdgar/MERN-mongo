@@ -1,0 +1,9 @@
+{
+  "name": "Mersedes",
+  "img": "http://localhost:3000/uploads/photo-660507034.jpeg",
+  "desc": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe eos dolores fuga facilis cum debitis magnam adipisci sint corporis voluptates, consequuntur at illum doloremque sed minus nam cupiditate voluptas, exercitationem vel ab ipsa ut reiciendis. Dignissimos libero suscipit aliquam neque.",
+  "model": "GTE450",
+  "color": "black",
+  "year": "2022",
+  "engine": "v5.6"
+}
